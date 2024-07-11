@@ -113,7 +113,7 @@ export const loginController = async (req, res) => {
         message: "Email is not registered",
       });
     }
-    const match = comparePassword(password, user.password);
+    const match = await comparePassword(password, user.password);
     if (!match) {
       return res.status(404).send({
         success: false,
