@@ -2,6 +2,7 @@ import slugify from "slugify";
 import productModel from "../models/productModel.js";
 import fs from "fs";
 import categoryModel from "../models/categoryModel.js";
+
 export const createProductController = async (req, res) => {
   try {
     const { name, description, price, category, quantity, shipping } =
