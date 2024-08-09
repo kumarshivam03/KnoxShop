@@ -24,6 +24,8 @@ import Search from "./pages/Search.js";
 import ProductDetails from "./pages/ProductDetails.js";
 import Categories from "./pages/Categories.js";
 import CategoryProduct from "./pages/CategoryProduct.js";
+import CartPage from "./pages/CartPage.js";
+import AdminOrders from "./pages/Admin/AdminOrders.js";
 function App() {
   return (
     <>
@@ -32,6 +34,7 @@ function App() {
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/product/:slug" element={<ProductDetails />}></Route>
         <Route path="/categories" element={<Categories />}></Route>
+        <Route path="/cart" element={<CartPage />}></Route>
         <Route path="/category/:slug" element={<CategoryProduct />}></Route>
         <Route path="/search" element={<Search />}></Route>
         <Route path="/dashboard" element={<PrivateRoute />}>
@@ -47,6 +50,7 @@ function App() {
 
           <Route path="admin/products" element={<Product />} />
           <Route path="admin/users" element={<Users />} />
+          <Route path="admin/orders" element={<AdminOrders />} />
         </Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/forgot-password" element={<ForgotPassword />}></Route>
