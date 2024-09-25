@@ -1,6 +1,6 @@
 # E-Commerce Website
 
-This is a full-stack e-commerce website project built using **Node.js** for the backend and **React** for the frontend. The project allows users to browse products, add to cart, and complete purchases using Braintree for payment processing.
+KnoxShop is a full-stack e-commerce website project built using **Node.js** for the backend and **React** for the frontend. The project allows users to browse products, add to cart, and complete purchases using Braintree for payment processing.
 
 ## Table of Contents
 
@@ -104,7 +104,7 @@ This is a full-stack e-commerce website project built using **Node.js** for the 
 
 3. Start the frontend:
    ```bash
-   npm start
+   npm run start
    ```
 
 ### Scripts
@@ -120,35 +120,39 @@ This is a full-stack e-commerce website project built using **Node.js** for the 
 
 To run the project locally, follow the steps:
 
-1. Clone the repository:
+1.  Clone the repository:
 
-   ```bash
-   git clone https://github.com/yourusername/ecommerce.git
-   cd ecommerce
-   ```
+    ```bash
+    git clone https://github.com/yourusername/ecommerce.git
+    cd ecommerce
+    ```
 
-2. Install both backend and frontend dependencies:
+2.  Install both backend and frontend dependencies:
 
-   - For backend:
-     ```bash
-     cd backend
-     npm install
-     ```
-   - For frontend:
-     ```bash
-     cd ../frontend
-     npm install
-     ```
+    - For backend:
+      ```bash
+      cd backend
+      npm install
+      ```
+    - For frontend:
+      ```bash
+      cd ../frontend
+      npm install
+      ```
 
-3. Set up environment variables in the backend `.env` file as explained in the backend section.
+3.  Set up environment variables in the backend `.env` file as explained in the backend section.
 
-4. Run the backend and frontend concurrently:
-   ```bash
-   cd backend
-   npm run dev
-   ```
-
-This will start both the backend server and the React frontend.
+4.  Run the backend and frontend separately:
+    ```bash
+    cd backend
+    npm run server
+    ```
+        ```bash
+    cd frontend
+    npm run start
+    ```
+    This will start both the backend server and the React frontend.
+    ```
 
 ---
 
