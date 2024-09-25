@@ -145,13 +145,13 @@ const HomePage = () => {
               className="btn btn-danger"
               onClick={() => window.location.reload()}
             >
-              RESET FILTERS
+              Reset Filters
             </button>
           </div>
         </div>
-        <div className="col-md-9 ">
+        <div className="col-md-9">
           <h1 className="text-center">All Products</h1>
-          <div className="d-flex flex-wrap">
+          <div className="products-container">
             {products?.map((p) => (
               <div className="card m-2" key={p._id}>
                 <img
@@ -169,9 +169,7 @@ const HomePage = () => {
                       })}
                     </h5>
                   </div>
-                  <p className="card-text ">
-                    {p.description.substring(0, 60)}...
-                  </p>
+
                   <div className="card-name-price">
                     <button
                       className="btn btn-info ms-1"
@@ -190,7 +188,7 @@ const HomePage = () => {
                         toast.success("Item Added to cart");
                       }}
                     >
-                      ADD TO CART
+                      Add to Cart
                     </button>
                   </div>
                 </div>
@@ -210,7 +208,6 @@ const HomePage = () => {
                   "Loading ..."
                 ) : (
                   <>
-                    {" "}
                     Loadmore <AiOutlineReload />
                   </>
                 )}

@@ -48,7 +48,7 @@ function Register() {
               onChange={(e) => setName(e.target.value)}
               className="form-control"
               id="exampleInputName"
-              placeholder="Enter your name"
+              placeholder="Enter Name"
               required
             />
           </div>
@@ -59,7 +59,7 @@ function Register() {
               onChange={(e) => setEmail(e.target.value)}
               className="form-control"
               id="exampleInputEmail"
-              placeholder="Enter your email"
+              placeholder="Enter Email"
               required
             />
           </div>
@@ -70,7 +70,7 @@ function Register() {
               onChange={(e) => setPassword(e.target.value)}
               className="form-control"
               id="exampleInputPassword"
-              placeholder="Enter your password"
+              placeholder="Enter Password"
               required
             />
           </div>
@@ -81,7 +81,7 @@ function Register() {
               onChange={(e) => setPhone(e.target.value)}
               className="form-control"
               id="exampleInputPhone"
-              placeholder="Enter your phone"
+              placeholder="Enter Phone"
               required
             />
           </div>
@@ -92,7 +92,7 @@ function Register() {
               onChange={(e) => setAddress(e.target.value)}
               className="form-control"
               id="exampleInputAddress"
-              placeholder="Enter your address"
+              placeholder="Enter Address"
               required
             />
           </div>
@@ -103,7 +103,7 @@ function Register() {
               onChange={(e) => setAnswer(e.target.value)}
               className="form-control"
               id="exampleInputPhone"
-              placeholder="What is the name of your primary school"
+              placeholder="Enter Primary School Name"
               required
             />
           </div>

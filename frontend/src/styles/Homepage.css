@@ -1,8 +1,49 @@
-.banner-img {
-  margin-top: 20px;
-  height: 300px;
+/* Filter Sidebar Fixed Position */
+.filters {
+  position: sticky;
+  top: 20px;
+  height: 100vh;
+  overflow-y: auto;
 }
 
+.filters h4 {
+  margin-top: 50px;
+  color: gray !important;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+}
+
+/* Adjusting Checkbox alignment uniformly */
+.ant-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 0; /* Remove any extra left margin */
+  padding-left: 8px; /* Add consistent left padding */
+}
+
+.ant-checkbox-wrapper:first-of-type {
+  padding-left: 8px; /* Ensures all checkboxes are aligned similarly */
+}
+
+.ant-checkbox-wrapper > span {
+  margin-left: 8px; /* Space between checkbox and label */
+}
+
+/* Uniform radio button spacing */
+.ant-radio-wrapper {
+  margin-bottom: 5px !important;
+  margin-left: 10px;
+}
+
+/* Reset Filters Button */
+.filters button {
+  background-color: black;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  margin-top: 20px;
+}
+
+/* Home Page */
 .home-page h1 {
   color: gray;
   font-family: "Playfair Display", serif;
@@ -12,12 +53,23 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+/* Product Grid */
+.home-page .products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+/* Product Cards */
 .home-page .card {
   background-color: rgba(128, 128, 128, 0.097);
-  width: 18rem;
+  width: 100%; /* Make card take full space in the grid */
 }
+
 .home-page .card-name-price {
   display: flex;
+  margin-top: 10px;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -26,57 +78,38 @@
   color: green;
   font-weight: bold;
 }
+
+/* Add-to-cart and More Details button alignment */
 .home-page button {
   border-radius: 0;
   width: 100%;
+  margin-top: 35px;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
   font-size: 14px;
   font-weight: bold;
 }
 
-.home-page .card-text {
-  color: rgb(90, 89, 89);
+/* Uniform Image Size */
+.home-page .card img {
+  height: 200px; /* Set a fixed height for the images */
+  width: 100%; /* Ensure images cover full card width */
+  object-fit: cover; /* Ensure images cover the area uniformly */
 }
 
 .home-page .card img:hover {
   transform: scale(0.9);
 }
 
-.home-page .card-img-top {
-  height: 300px !important;
-}
-/* ==================
-  filters
-  ============== */
-.filters h4 {
-  margin-top: 100px;
-  color: gray !important;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.337);
-}
-
-.ant-checkbox-wrapper:first-of-type {
-  margin-left: 8px;
-}
-
-.ant-checkbox-wrapper {
-  margin: 2px;
-}
-.ant-radio-wrapper {
-  margin-bottom: 5px !important;
-  margin-left: 10px;
-}
-
-.filters button {
-  background-color: black;
-  width: 100%;
-  border: none;
-  border-radius: 0;
-  margin-top: 20px;
-}
-
+/* Load More Button */
 .loadmore {
   color: green;
   font-weight: bold;
   font-size: 20px !important;
+}
+
+/* Banner Image */
+.banner-img {
+  height: 300px;
+  margin-top: 20px;
 }

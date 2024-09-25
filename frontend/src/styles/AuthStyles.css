@@ -1,5 +1,7 @@
 /* ===================================
-========= register page  */
+========= Register Page Styles =======
+==================================== */
+
 .form-container {
   margin-top: 60px;
   display: flex;
@@ -7,57 +9,80 @@
   justify-content: center;
   min-height: 70vh;
   flex-direction: column;
-  background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #2756e3 0%, #925acb 100%);
+  background-color: #f3f8fe; /* Subtle blue background */
+  background-image: linear-gradient(
+    45deg,
+    #83a4d4,
+    #b6fbff
+  ); /* Soft gradient */
 }
 
 .form-container form {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 20px;
-  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+  padding: 20px; /* Reduced padding to decrease height */
+  background-color: #f8f9fa; /* Light grey for the form background */
+  border-radius: 15px; /* Rounded corners for the form */
+  max-width: 350px; /* Reduced width slightly */
+  width: 100%;
 }
 
 .form-container form .title {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 15px; /* Reduced margin-bottom */
   font-weight: bold;
   font-family: "Playfair Display", serif;
+  font-size: 22px; /* Reduced font size */
+  color: #333;
 }
 
 .form-container form input {
   border: none;
-  border-bottom: 1px solid #000;
-  border-radius: 0;
+  border-bottom: 2px solid #2756e3;
+  border-radius: 5px;
+  padding: 8px; /* Reduced padding inside input fields */
+  margin-bottom: 15px; /* Reduced space between input fields */
+  background-color: #f0f3f6; /* Light input background */
+  width: 100%;
+  transition: border-bottom 0.3s ease;
+}
+
+.form-container form input:focus {
+  border-bottom: 2px solid #925acb; /* Change border color on focus */
+  outline: none;
 }
 
 .form-container form button {
-  border: 1px solid black;
-  border-radius: 0;
-  background-color: #000;
+  border: none;
+  border-radius: 25px;
+  background-color: #2756e3;
   color: white;
-  width: 250px;
+  width: 100%;
+  padding: 8px; /* Reduced padding for the button */
+  font-weight: bold;
+  font-size: 15px; /* Reduced font size for the button */
+  transition: background 0.3s ease;
 }
 
 .form-container form button:hover {
-  border: 1px solid black;
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to right,
+    45deg,
     #434343,
     #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); /* Dark gradient on hover */
 }
 
+/* Button for the forgot password */
 .forgot-btn {
   background-color: #434343a4 !important;
   border: 0 !important;
+  border-radius: 25px;
 }
 
 .forgot-btn:hover {
   color: white !important;
+}
+
+/* Additional form box shadow effect on hover */
+.form-container form:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px; /* Slight increase in shadow on hover */
 }
