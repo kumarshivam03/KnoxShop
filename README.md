@@ -1,70 +1,157 @@
-# Getting Started with Create React App
+# E-Commerce Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full-stack e-commerce website project built using **Node.js** for the backend and **React** for the frontend. The project allows users to browse products, add to cart, and complete purchases using Braintree for payment processing.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Backend](#backend)
+- [Frontend](#frontend)
+- [Installation](#installation)
+- [Running the Project](#running-the-project)
+- [License](#license)
 
-### `npm start`
+## Backend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- REST API built using **Express.js**.
+- **MongoDB** is used as the database.
+- **JWT Authentication** for user login and registration.
+- **Braintree Payment Gateway** integration.
+- Form handling with **express-formidable**.
+- Secure password storage with **bcrypt**.
 
-### `npm test`
+### Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js
+- Express.js
+- MongoDB & Mongoose
+- JWT Authentication
+- Braintree Payment Gateway
+- Nodemon for development
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository and navigate to the backend folder:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/yourusername/ecommerce.git
+   cd ecommerce/backend
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install the dependencies:
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Create a `.env` file in the backend directory and add the following environment variables:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   MONGO_URI=your-mongodb-uri
+   JWT_SECRET=your-jwt-secret
+   BRAINTREE_MERCHANT_ID=your-braintree-merchant-id
+   BRAINTREE_PUBLIC_KEY=your-braintree-public-key
+   BRAINTREE_PRIVATE_KEY=your-braintree-private-key
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Start the server:
+   ```bash
+   npm run server
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Scripts
 
-## Learn More
+- `npm start`: Starts the backend using Node.
+- `npm run server`: Starts the backend with Nodemon for auto-reloading.
+- `npm run client`: Starts the React frontend from within the backend directory.
+- `npm run dev`: Runs both the backend and frontend concurrently in development mode.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Frontend
 
-### Code Splitting
+### Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **React.js** for building the user interface.
+- **React Router** for navigation.
+- **Ant Design** and **React Icons** for the UI components and icons.
+- **Axios** for making API calls.
+- **Braintree Drop-in** for integrating the payment gateway.
 
-### Analyzing the Bundle Size
+### Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- React.js
+- Ant Design for UI components
+- React Router
+- Axios for API calls
+- Braintree for payments
+- React Toastify for notifications
 
-### Making a Progressive Web App
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Navigate to the frontend directory:
 
-### Advanced Configuration
+   ```bash
+   cd ecommerce/frontend
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. Install the dependencies:
 
-### Deployment
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. Start the frontend:
+   ```bash
+   npm start
+   ```
 
-### `npm run build` fails to minify
+### Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `npm start`: Starts the frontend development server.
+- `npm run build`: Builds the app for production.
+- `npm run test`: Launches the test runner.
+- `npm run eject`: Ejects the configuration for customization.
+
+---
+
+## Installation
+
+To run the project locally, follow the steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/ecommerce.git
+   cd ecommerce
+   ```
+
+2. Install both backend and frontend dependencies:
+
+   - For backend:
+     ```bash
+     cd backend
+     npm install
+     ```
+   - For frontend:
+     ```bash
+     cd ../frontend
+     npm install
+     ```
+
+3. Set up environment variables in the backend `.env` file as explained in the backend section.
+
+4. Run the backend and frontend concurrently:
+   ```bash
+   cd backend
+   npm run dev
+   ```
+
+This will start both the backend server and the React frontend.
+
+---
+
+## License
+
+This project is licensed under the ISC License.
