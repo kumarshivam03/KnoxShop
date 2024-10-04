@@ -4,6 +4,7 @@ import Layout from "../../components/Layouts/Layout";
 import axios from "axios";
 import { useAuth } from "../../context/auth";
 import moment from "moment";
+
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [auth, setAuth] = useAuth();
@@ -20,6 +21,7 @@ const Orders = () => {
   useEffect(() => {
     if (auth?.token) getOrders();
   }, [auth?.token]);
+
   return (
     <Layout title={"Your Orders"}>
       <div className="container-fluid p-3 m-3">
@@ -31,7 +33,7 @@ const Orders = () => {
             <h1 className="text-center">All Orders</h1>
             {orders?.map((o, i) => {
               return (
-                <div className="border shadow">
+                <div className="border shadow mb-4" key={i}>
                   <table className="table">
                     <thead>
                       <tr>
@@ -56,19 +58,34 @@ const Orders = () => {
                   </table>
                   <div className="container">
                     {o?.products?.map((p, i) => (
-                      <div className="row mb-2 p-3 card flex-row " key={p._id}>
+                      <div
+                        className="row mb-2 p-3 card flex-row align-items-center"
+                        key={p._id}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          border: "1px solid #e0e0e0",
+                          padding: "10px",
+                          marginBottom: "15px",
+                          borderRadius: "5px",
+                          boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
+                        }}
+                      >
                         <div className="col-md-4">
                           <img
                             src={`/api/v1/product/product-photo/${p._id}`}
-                            className="card-img-top"
                             alt={p.name}
-                            width="100px"
-                            height={"100px"}
+                            style={{
+                              width: "100%",
+                              height: "150px", // Fixed height
+                              objectFit: "cover", // Keep aspect ratio
+                              borderRadius: "5px",
+                            }}
                           />
                         </div>
                         <div className="col-md-8">
-                          <p>{p.name}</p>
-                          <p>{p.description.substring(0, 30)}</p>
+                          <p style={{ fontWeight: "bold" }}>{p.name}</p>
+                          <p>{p.description.substring(0, 30)}...</p>
                           <p>Price: {p.price}</p>
                         </div>
                       </div>
